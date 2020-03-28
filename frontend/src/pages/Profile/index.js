@@ -4,11 +4,11 @@ import {Link} from 'react-router-dom';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
 import './styles.css';
 import api from '../../services/api'
-//import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export default function Profile(){
     const [incidents, setIncidents] = useState([]);
-    //const history = useHistory();
+    const history = useHistory();
     const ongId = localStorage.getItem('ongId');
     const ongName = localStorage.getItem('ongName');
 
@@ -40,7 +40,7 @@ export default function Profile(){
 
     async function handleLogout(){
         localStorage.clear();
-    //    history.push('/');
+        history.push('/');
     }
 
     return(
