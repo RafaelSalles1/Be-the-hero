@@ -27,7 +27,7 @@ export default function Register(){
             const response = await api.post('ongs', data)
 
             alert(`Seu ID de acesso: ${response.data.id}`)
-            histoty.push('/')
+            historcdy.push('/')
         } catch (err){
             alert("Erro no cadastro. Tente novamente")
         }
